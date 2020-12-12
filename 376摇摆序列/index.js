@@ -27,7 +27,7 @@
  * @return {number}
  */
 
-const input = [1,7,4,9,2,5]
+const input = [1,4,7,2,5]
 
 const wiggleMaxLength = (nums) => {
     const n = nums.length;
