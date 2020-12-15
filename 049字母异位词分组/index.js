@@ -20,6 +20,18 @@
  * @return {string[][]}
  */
 
+
+ /*
+		思路：
+		1. 用for loop 获取strs字符串数组中的每个str -> 把str转换成Array进行排序   array = Array.from(str)  array.sort
+		2. 把已经排序好的Array再变成字符串，作为Key值在Map中寻找。 如果存在这个key值的数组，返回该数组，否则新建一个新数组
+		3. list.push(str)到获取到的数组之中， 更新Map中的数组
+		4. 返回Array.form(map.values()),这样可以去除key值 
+				Array.form(map.values()): [[value], [value], [value]]
+				Array.form(map)			: [[key, value], [key, value], [key, value]]
+		
+ */
+
 const input = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
 var groupAnagrams = function(strs) {

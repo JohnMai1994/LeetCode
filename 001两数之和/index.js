@@ -16,8 +16,18 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
 
+
+/*
+	思路：
+	因为是两数之和，所以我们其实只需要关注其中一个数字就可以，剩下的另一个数字交给map来处理
+	1. 把数组中的数字，用forEach 放进Map中，key=item value=index(为了获取item的位置)
+	2. for循环，循环找到 目标值减去数组中的一个，获得 diff, 再从上面的Map中找是否存在和diff一样的值，如果一样，就retrun [i, Map.get(diff)]
+	3. 循环结束都没有找到，return []; 
+
+*/
+
+var twoSum = function(nums, target) {
     // 使用Map来做
     const originMap = new Map();
     nums.forEach((item, index) => {
@@ -30,5 +40,6 @@ var twoSum = function(nums, target) {
             return [i, originMap.get(diff)]
         }
     }
+    return [];
 };
 
