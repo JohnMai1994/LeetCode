@@ -73,7 +73,9 @@ var lengthOfLIS2 = function(nums) {
                     l = mid;
                     break;
                 };
+
                 if (arr[mid] < nums[i]) {
+
                     l = mid + 1;
                 } else {
                     r = mid;
@@ -88,5 +90,5 @@ var lengthOfLIS2 = function(nums) {
 };
 
 
-console.log(lengthOfLIS2([10, 9, 2, 5, 3, 7, 101, 18]));
+console.log(lengthOfLIS2([1,2,3,4,5,6,7,8,4.5]));
 
