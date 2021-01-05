@@ -44,8 +44,8 @@
 var lengthOfLIS = function(nums) {
     var dp = [1]
 
-    for(var i = 1; dp[i] = 1, i < nums.length; i++) {
-        for (var j = 0; j < i; j++) {
+    for(let i = 1; dp[i] = 1, i < nums.length; i++) {
+        for (let j = 0; j < i; j++) {
             nums[i] > nums[j] && (dp[i] = Math.max(dp[i], dp[j] +1))
         }
     }
