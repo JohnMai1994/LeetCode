@@ -26,6 +26,12 @@
  * @param {number} k
  * @return {void} Do not return anything, modify nums in-place instead.
  */
+
+// 思路： 三重旋转
+// 一重旋转，整体旋转
+// 二重旋转，k值前旋转
+// 二重旋转，k值后旋转
+
 var rotate = function(nums, k) {
     k %= nums.length
     reverse(nums, 0, nums.length -1);
