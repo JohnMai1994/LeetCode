@@ -36,4 +36,17 @@ var minCostClimbingStairs = function(cost) {
     return curr
 };
 
-console.log(minCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]));
+var minCostClimbingStairs2 = function(cost) {
+    const n = cost.length;
+    let result = [0, 0]
+
+    for (let i = 2; i<= n; i++) {
+        result[i] = Math.min(result[i-2] + cost[i-2], result[i-1] + cost[i-1])
+    }
+    return result[n]
+
+}
+
+
+console.log(minCostClimbingStairs( [2,3, 100, 1]));
+console.log(minCostClimbingStairs2( [2,3, 100, 1]));

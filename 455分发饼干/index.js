@@ -55,4 +55,4 @@ var findContentChildren = function(g, s) {
 };
 
 
-console.log(findContentChildren([10,9,8,7],  [5,6,7,8]));
+console.log(findContentChildren([10,9,8,7],  [5,4,1]));
